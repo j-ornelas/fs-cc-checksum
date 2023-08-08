@@ -1,0 +1,4 @@
+/application/node_modules/
+/server/node_modules/
+/server/dist
+.env
