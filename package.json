@@ -1,0 +1,16 @@
+{
+  "name": "fs-cc-checksum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start:client": "cd client && npm start && cd ..",
+    "start:server": "cd server && npm start && cd ..",
+    "start": "npm run start:client | npm run start:server",
+    "install:client": "cd client && npm install && cd ..",
+    "install:server": "cd server && npm install && cd ..",
+    "init": "npm run install:client && npm run install:server"
+  },
+  "author": "",
+  "license": "ISC"
+}
