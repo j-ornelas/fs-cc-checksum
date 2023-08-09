@@ -13,7 +13,6 @@ interface IsValidRequest extends Request {
 }
 router.post('/is-valid', async (req: IsValidRequest, res: Response) => {
   const { cardNumber } = req.body;
-  // Todo only check numbers, currently breaks with text strings
   res.send(luhn(cardNumber));
 });
 

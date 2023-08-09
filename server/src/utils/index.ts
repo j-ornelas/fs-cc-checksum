@@ -1,6 +1,8 @@
 export const luhn = (function (arr) {
   return function (ccNum: string) {
-    var len = ccNum.length,
+    const numsOnly = ccNum.replace(/\D/g, '');
+    if (numsOnly.length !== ccNum.length) return false;
+    let len = ccNum.length,
       bit = 1,
       sum = 0,
       val;

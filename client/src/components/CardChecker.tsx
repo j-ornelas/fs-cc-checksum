@@ -45,7 +45,6 @@ export function CardChecker() {
       <InputRow>
         <div>
           <input
-            type="number"
             onChange={(e) => handleInputChange(e.currentTarget.value)}
             value={cardNum}
           />
@@ -53,7 +52,7 @@ export function CardChecker() {
         </div>
         <div>
           <button type="button" onClick={handleClick}>
-            check
+            Submit
           </button>
         </div>
       </InputRow>
