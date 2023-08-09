@@ -6,8 +6,13 @@ import { luhn } from '../utils';
 const router = Router();
 router.use(bodyParser.json());
 
-router.post('/is-valid', async (req: Request, res: Response) => {
-  const { cardNumber } = req.body; // todo make explicit type
+interface IsValidRequest extends Request {
+  body: {
+    cardNumber: string;
+  };
+}
+router.post('/is-valid', async (req: IsValidRequest, res: Response) => {
+  const { cardNumber } = req.body;
   // Todo only check numbers, currently breaks with text strings
   res.send(luhn(cardNumber));
 });
