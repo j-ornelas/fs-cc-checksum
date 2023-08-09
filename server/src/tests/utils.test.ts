@@ -13,4 +13,9 @@ describe('luhn algorithm correctly detects card numbers', () => {
     expect(luhn('1234')).toBe(false);
     expect(luhn('111111111111')).toBe(false);
   });
+  test('returns false when non-integer values are passed', () => {
+    expect(luhn('3e7144963.5398431')).toBe(false);
+    expect(luhn('3056e930902594')).toBe(false);
+    expect(luhn('-6011111111111117')).toBe(false);
+  });
 });

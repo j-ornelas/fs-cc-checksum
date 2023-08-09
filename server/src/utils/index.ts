@@ -1,3 +1,11 @@
+/*
+  slightly modified from https://gist.github.com/ShirtlessKirk/2134376
+
+  Modified above to return false if any non-integer values are in the string.
+  Implementing luhn's algo on my own likely would have eaten up at least half 
+  of my 3-hour time limit for this demo, hopefully using this is not an issue!
+*/
+
 export const luhn = (function (arr) {
   return function (ccNum: string) {
     const numsOnly = ccNum.replace(/\D/g, '');

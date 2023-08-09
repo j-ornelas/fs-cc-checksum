@@ -1,10 +1,10 @@
 import request from 'supertest';
 
-import { app } from '../index';
+import { server } from '../server';
 
 describe('Card is-valid returns proper boolean response', () => {
   test('returns true for valid card numbers', (done) => {
-    request(app)
+    request(server)
       .post('/card/is-valid')
       .send({ cardNumber: '371449635398431' })
       .expect(200)
@@ -15,7 +15,7 @@ describe('Card is-valid returns proper boolean response', () => {
       });
   });
   test('returns false for invalid card numbers', (done) => {
-    request(app)
+    request(server)
       .post('/card/is-valid')
       .send({ cardNumber: '1111111111111' })
       .expect(200)
